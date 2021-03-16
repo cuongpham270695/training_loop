@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Game đoán số</title>
+</head>
+<body>
+    <button type="button" onclick="play()">Let's play!</button>
+    <script type="text/javascript">
+    function play() {
+        let playleft=3;
+        var min = parseInt(prompt("Enter min number:"));
+        // console.log(min);
+        var max = parseInt(prompt("Enter max number:"));
+        // console.log(max);
+        var randomnum = parseInt(Math.floor(Math.random() * (max - min + 1) + min));
+        console.log(randomnum);
+        var guessNum = parseInt(prompt("Enter your guess number,playleft:" +playleft));
+        console.log(guessNum, playleft);
+        while(guessNum!==randomnum){
+            if (playleft > 1) {
+                playleft--;
+                guessNum= parseInt(prompt("Enter your guess number,playleft:" +playleft));
+            console.log(guessNum, playleft);
+            } else {
+                alert("You lose!");
+                break;
+            }
+        }
+
+        if (guessNum===randomnum)
+        {alert("You win!");}
+    }
+    </script>
+</body>
+</html>

@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tìm số trong dãy fibonacci chia hết cho 5</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let num1=0;
+        let num2=1;
+        for(let i=1;;i++)
+        {
+            sum=num1+num2;
+            num1=num2;
+            num2=sum;
+            if(sum%5===0){
+                document.write(sum);
+                break;
+            }
+        }
+    </script>
+</body>
+</html>

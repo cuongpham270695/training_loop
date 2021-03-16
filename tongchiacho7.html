@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tổng 30 số đầu tiên chia hết cho 7</title>
+</head>
+<body>
+<script type="text/javascript">
+    function chia7(a) {
+        if (a % 7 === 0) {
+            return true;
+        }
+        return false;
+    }
+
+    let count = 0;
+    let num = 0;
+    let result=0;
+    while (count <= 30) {
+        if (chia7(num)) {
+            count++;
+            result=result+num;
+        }
+        num++;
+    }
+    document.write(result);
+
+</script>
+</body>
+</html>
